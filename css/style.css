@@ -1,0 +1,34 @@
+body{
+	font-family:calibri;
+}
+
+h2,h4{
+	color:blue;
+}
+
+#basic, #mailing, #finance{
+	font-size:20px;
+	color:blue;
+}
+
+.form-group, .mailing{
+	width:500px;
+}
+
+textarea {
+  display:block;
+  margin:1em 0;
+}
+
+ 
+input[type="radio"],input.radio {
+	display:inline;
+    vertical-align:text-top;
+    width:13px;
+    height:13px;
+    padding:0;
+    margin:0;
+    position:relative;
+    overflow:hidden;
+    top:2px;
+}

@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Registration</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+  <link rel="stylesheet" href="css/bootstrap.css">
+  <script src="js/bootstrap.js"></script>
+  
+  <link href="css/style.css" type="text/css" rel="stylesheet"/>
+  <script src="js/javasc.js"></script>
+  
+   
+  <style>
+    /* Set height of the grid so .sidenav can be 100% (adjust if needed) */
+    .row.content {height: 1500px}
+    
+    /* Set gray background color and 100% height */
+    .sidenav {
+      background-color: #f1f1f1;
+      height: 100%;
+    }
+    
+    /* Set black background color, white text and some padding */
+    footer {
+      background-color: #555;
+      color: white;
+      padding: 15px;
+    }
+    
+    /* On small screens, set height to 'auto' for sidenav and grid */
+    @media screen and (max-width: 767px) {
+      .sidenav {
+        height: auto;
+        padding: 15px;
+      }
+      .row.content {height: auto;} 
+    }
+	
+	.form-group{
+	text-transform:capitalize;
+	}
+  </style>
+</head>
+<body>
+
+<div class="container-fluid">
+  <div class="row content">
+    <div class="col-sm-3 sidenav">
+      <h4>International University of Sarajevo</h4>
+      <ul class="nav nav-pills nav-stacked">
+        <li class="active"><a href="#section1">Home</a></li>
+      </ul><br>
+      <div class="input-group">
+        <input type="text" class="form-control" placeholder="Search...">
+        <span class="input-group-btn">
+          <button class="btn btn-default" type="button">
+            <span class="glyphicon glyphicon-search"></span>
+          </button>
+        </span>
+      </div>
+    </div>
+	<div class="col-sm-9">
+      <h2>New Registration</h2><br/>
+	  <form>
+      <div class="form-group">
+	  <legend id="basic">Basic Informations</legend>
+	  	  <label for="firstName">Name:</label>
+		  <input type="text" class="form-control" maxlength="20" required="required" id="firstName" />
+	  </div>
+	  
+	  <div class="form-group">
+	  	  <label for="lastName">Surname:</label>
+		  <input type="text" class="form-control" maxlength="20" required="required" id="lastName"/>
+	  </div>
+	  
+	  <div class="form-group">
+	  	  <label for="dob">Date of Birth:</label>
+		  <input type="Date" class="form-control" required="required" id="dob"/>
+	  </div>
+	  
+	  <div class="form-group">
+	  	  <label for="email">Email:</label>
+		  <input type="email" class="form-control" maxlength="20" required="required" id="email"/>
+	  </div>
+	  
+	  <div class="form-group">
+	  	  <label for="tel">Phone Number:</label>
+		  <input type="tel" class="form-control" required="required" id="tel"/>
+	  </div><br/>
+	  
+	  <div class="mailing">
+	  <legend id="mailing">Mailing</legend>
+	  	  <label for="address">Address:</label>
+		  <input type="address" class="form-control" maxlength="20" required="required" id="address"/><br/>
+		  
+		  <label for="city">City:</label>
+		  <input type="text" class="form-control" maxlength="20" required="required" id="city"/><br/>
+		  
+		  <label for="zip">Zip:</label>
+		  <input type="text" class="form-control" required="required" id="zip"/><br/>
+	  </div>
+	  
+	  <div class="select">
+	  	  <label for="dept">Study Program:</label><br/><br/>
+		  <select class="select" required="required" id="dept">
+		  <option>Computer Science and Engineering</option>
+		  <option>Mechanical Engineering</option>
+		  <option>Industrial Engineering</option>
+		  <option>Software Engineering</option>
+		  </select>
+	  </div><br/>
+	  <div class="calculate">
+	  <div class="form-group">
+	  <legend id="finance">Finance</legend>
+	  	  <label for="tut">Tuition Fee:</label>
+		  <input type="text" name="calc" class="form-control" required="required" id="tut" value="0" />
+	  </div>
+	  
+	  <div class="form-group">
+	  	  <label for="scholarship">Scholarship amount:</label>
+		  <input type="text" name="calc" class="form-control" required="required" id="scholarship" value="0"/>
+	  </div>
+	  
+	  <div class="form-group">
+	  	  <label for="installment">Total number of installments:</label><br/>
+		  <input type="radio" name="ins" value="1" class="form-control" required="required" id="installment" />1
+		  <input type="radio" name="ins" value="2" class="form-control" required="required" id="installment" />2
+		  <input type="radio" name="ins" value="3" class="form-control" required="required" id="installment" />3
+		  <input type="radio" name="ins" value="4" class="form-control" required="required" id="installment" checked />4
+		  <input type="radio" name="ins" value="5" class="form-control" required="required" id="installment" />5
+		  <input type="radio" name="ins" value="6" class="form-control" required="required" id="installment" />6
+		  <input type="radio" name="ins" value="7" class="form-control" required="required" id="installment" />7
+		  <input type="radio" name="ins" value="8" class="form-control" required="required" id="installment" />8
+	  </div>
+	  
+	  <div class="form-group">
+	  	  <label for="cash">Cash amount:</label>
+		  <input type="text" name="calc" class="form-control" required="required" id="cash" value="0"/>
+	  </div>
+	  </div>
+	  <div class="form-group">
+	  	  <label for="insamount">Installment amount:</label>
+		  <input type="text" class="form-control" id="insamount" readonly />
+	  </div>
+	  
+	  <div id="newtext" class="form-group"></div>
+	  
+	  <div class="form-group">
+	  	  <label for="total">Total amount:</label>
+		  <input type="text" name="total" class="form-control" id="total" readonly />
+	  </div>
+	  
+	  <div class="form-group">
+	  	  <label for="comments">Comments:</label>
+		  <textarea class="form-control" maxlength="300" id="comments" ></textarea>
+		  <span id="count">300</span> characters remaining
+	  </div>
+	  
+	  <input type="submit" value="SUBMIT"/><br/><br/>
+	  
+	  
+      </div>
+
+
+  </div>
+</div>
+
+<footer class="container-fluid" align="center">
+  <p>Created by Emina Dzaferovic</p>
+</footer>
+
+</body>
+</html>
